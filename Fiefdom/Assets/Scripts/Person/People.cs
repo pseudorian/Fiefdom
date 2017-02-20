@@ -19,6 +19,35 @@ namespace People
         hunger, thirst, age
     }
 
+    public enum Profession
+    {
+        unemployed,         //No job
+        child,              //Children can't work
+        student,            //Older children and adults can attend school
+        timberman,          //Fells trees and collects timber
+        miner,              //Mines ores
+        quarrier,           //Quarries for stone
+        architect,          //Designs buildings before they are built
+        carpenter,          //Builds wooden portions of constructions
+        mason,              //Builds stone and brick portions of constructions
+        thatcher,           //Thatches rooves
+        builder,            //Builds constructions (general)
+        brewer,				//Brews and serves ale at abbeys
+        farmer,             //Farms fields
+        clayExtractor,      //Extracts clay from clay pits
+        ceramist            //Fires clay and makes bricks, pottery, etc.
+    }
+
+    public enum BuildPhase
+    {
+        blank,
+        general,
+        design,
+        carpentry,
+        masonry,
+        thatching
+    } 
+
     public enum WorkToughness
     {
         veryEasy,
@@ -27,7 +56,7 @@ namespace People
         hard,
         veryHard,
         mythical
-    };
+    }
 
     public enum PersonalityTrait
     {
@@ -123,5 +152,38 @@ namespace People
 				{92, ""}, {93, ""}, {94, ""}, {95, ""}, 
 				{96, ""}, {97, ""}, {98, ""},*/
         };
+    }
+
+    public enum ProjectType
+    {
+        build, farm
+    }
+
+    public class Project
+    {
+        public Transform target;
+        public ProjectType type;
+    }
+
+    public class Job
+    {
+        public Project project;
+        public Transform target;
+
+        public Job()
+        {
+            project = null;
+            target = null;
+        }
+    }
+
+    public class BuildJob : Job
+    {
+        public BuildPhase phase;
+
+        public BuildJob() : base()
+        {
+            phase = BuildPhase.blank;
+        }
     }
 }

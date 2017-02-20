@@ -5,6 +5,9 @@ using People;
 
 public class Peasant : Person
 {
+    //References
+    private Builder builder;
+
     //Traits
     public PersonFavourites favourites;
     public PersonHealth health;
@@ -14,10 +17,19 @@ public class Peasant : Person
     public PersonSkills skills;
     public PersonStatus status;
 
+    //Work-related information
+    public Job currentJob;
+
 
     public void Start()
     {
-        
+        //Set up references
+        builder = GetComponent<Builder>();
+    }
+
+    public void Update()
+    {
+
     }
 
     /// <summary>
@@ -37,5 +49,13 @@ public class Peasant : Person
     {
         this.family = family;
         status = new PersonStatus(this);
+    }
+
+
+    public Job FindWork()
+    {
+        Job newJob = new Job();
+
+        return newJob;
     }
 }

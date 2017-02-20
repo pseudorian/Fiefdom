@@ -15,6 +15,7 @@ public class Person : MonoBehaviour
     //pseudo: public building home
     
 
+
     //Pathfinding
     private AIPath pathing;
 
