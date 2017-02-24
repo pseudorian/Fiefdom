@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 101320839}
   - component: {fileID: 101320838}
   - component: {fileID: 101320837}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173648574}
   m_Layer: 0
-  m_Name: UI Manager
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 205163039}
   - component: {fileID: 205163038}
   m_Layer: 0
-  m_Name: Pathing Graph
+  m_Name: PathingGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astarData:
-    dataString: UEsDBBQAAAgIAACYn+uqyPj89gEAAEgEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlU9lu2zAQ/BVDz00hy1fct9SO3QJpY8Qp+kxTK2thihR41Efgf++SoiNFebIwMzucPfyWMFMDty/Mokq+DYZfBgkaVYHVyB/kXgCBKYFOYqF09ZjvYaGMNQSvmDBAlFbWV0uC3gbJKRac4+/F/w6u9MVBWtCtKpv0dYQEpZNcsKqGfIsX6BSktwL6CkKpcogan5wrIdDEKIk9155IFqw2jhohQY6MWgshvL4E3JfW+3WLn4vCgI2xNDsvUdOEGtfku7Kld6qYOTTJ/jHh/Dt3s+k8hGpcf30SZJNp4Autqh+3l4ehJ1siP7ywM2fGdibbhZcfozt5ZOLAdgL+liB/q7VWTuZEvmrnS52BbNmxeu9uUQI/tLombA909eddDttdXkP/p4XAaueRr+MO8HBCE+UEbYUKS5h7G9C0rp/UQzgXE80J9bn+GHhl++5dRWKF2liioilzVj2hPKw15l31DV+isU9YYTNcfyO+w51y2quTxzB3PxBnF0pLCHDsuwbJhD1v6F3bP4Qe13m5x6wYt+q2psjd/km9kgC3+jTtURt1fF/43mH+8Z6S3SSbFaOMw7hI0/n96I7NR6P74TQr5gUfj2ajJNwbSsrFxKYxju3QWmTbuKTb8o5+qIO1ZnW48Vyz4xovlerOGWWhtlwDyOfW4vofUEsDBBQAAAgIAACYn+s1sAq+NAAAADcAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RslIIKSpN1VFQKs7IL3etKClKBAq5JeYUg8QKMsvyS4B8JefUvJLUIqVaAFBLAwQUAAAICAAAmJ/rpwNSKmwAAAB5AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDWswBCQx0FpfSixIKMYqAQmFOamQJiRyslmRqZpxkbJaeapBkYWFoY6yZaGhtbGJoZpVmmJZsYmxsrxQLVl1QWpPol5qZC9AQklmSkZealZOal67kXZaa4g4xWiq0FAFBLAQItABQAAAgIAACYn+uqyPj89gEAAEgEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+s1sAq+NAAAADcAAAASACQAAAAAAAAAAAAAAEMCAABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rpwNSKmwAAAB5AAAACQAkAAAAAAAAAAAAAADLAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAADAAMAHAEAAIIDAAAAAA==
+    dataString: UEsDBBQAAAgIAACYn+tUP9o5+AEAAEoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlU8lu2zAQ/RVD56bQ4tRxbqkduwXSxohT9ExTI2tgihS41Evgf++QpiNFOYl48+bNm0VvCTMtcPvCLKrkfpR9GSVoVANWI3+QWwEEpgQ6iZXSzWO5hZky1hC8YMIAhbSyPlsS9DZKDjHhGL8n/x2d6cVBWtAdK78d8ggJTCe5YE0L5RpP0EtIrwn0CkSpSogc75wrIdBEK4k9tj6QzFhrHDVChBIZtRZMeH4NuK2t1+snP1eVARttaXaco6YJXVST78rWXqlhZndx9o8J5+vcZJNpEVxdZH99YmRpPg6ESqvmx7V2FrqyNfLdCztyZmxvtn14/tG8k3smdmwj4G8N8rdaauVkScFX7XyqM5DPe1Lv/c1q4LuOd3E7AF37eZtZt81zmMBhJrDZeOTruAc8HNBEOkFrocIapl4GNC3sJ/UQDsZEcUK9rz8GXtm2f1kxsEBtLIWiKHNWPaHcLTWWffYVn6OxT9jgZbj+SnyHG+W0ZyePYe5+IM7OlJYQ4Nh3C5IJe1xRXTs8hUGsV3kQWTBu1XVNMXb9lwYpAe74aToIrdT+feFbh+XHg0o2t/mkKnIO4ypNp3fFDZsWxV32La+mFR8XkyIJ94aSfDGxugjHdmgtsmtc0m15RT/U0VKzNlx5qdl+iadG9eeMslJrrgHkcydx/g9QSwMEFAAACAgAAJif6zWwCr40AAAANwAAABIAJABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVsrJT85OTVGyUggpKk3VUVAqzsgvd60oKUoECrkl5hSDxAoyy/JLgHwl59S8ktQipVoAUEsDBBQAAAgIAACYn+unA1IqbAAAAHkAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNazAEJDHQWl9KLEgoxioBCYU5qZAmJHKyWZGpmnGRslp5qkGRhYWhjrJloaG1sYmhmlWaYlmxibGyvFAtWXVBak+iXmpkL0BCSWZKRl5qVk5qXruRdlpriDjFaKrQUAUEsBAi0AFAAACAgAAJif61Q/2jn4AQAASgQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6zWwCr40AAAANwAAABIAJAAAAAAAAAAAAAAARQIAAGdyYXBoMF9lZGl0b3IuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+unA1IqbAAAAHkAAAAJACQAAAAAAAAAAAAAAM0CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAMAAwAcAQAAhAMAAAAA
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -356,7 +356,7 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
-  lastUniqueAreaIndex: 1
+  lastUniqueAreaIndex: 0
 --- !u!4 &205163039
 Transform:
   m_ObjectHideFlags: 0
@@ -378,8 +378,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1089982821}
+  - component: {fileID: 1089982823}
+  - component: {fileID: 1089982822}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,6 +400,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089982822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089982820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3229dc002995ce4db56347d935fbd15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TN_Wood: {fileID: 0}
+  TN_Stone: {fileID: 0}
+  TN_Straw: {fileID: 0}
+  TN_Brick: {fileID: 0}
+  TN_Iron: {fileID: 0}
+  TN_Beer: {fileID: 0}
+--- !u!114 &1089982823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089982820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ecd8c5e4ae8614593a09bdf93c7c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1331685032
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +545,7 @@ GameObject:
   - component: {fileID: 1853094981}
   - component: {fileID: 1853094980}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,7 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884212020}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +659,7 @@ GameObject:
   - component: {fileID: 1933924846}
   - component: {fileID: 1933924845}
   m_Layer: 0
-  m_Name: Player Controller
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

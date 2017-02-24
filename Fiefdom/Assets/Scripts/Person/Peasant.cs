@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using People;
+using Resources;
 
 public class Peasant : Person
 {
@@ -18,16 +19,16 @@ public class Peasant : Person
     public PersonStatus status;
 
     //Work-related information
-    public Job currentJob;
+    public Task currentTask;
 
 
-    public void Start()
+    void Start()
     {
         //Set up references
         builder = GetComponent<Builder>();
     }
 
-    public void Update()
+    void Update()
     {
 
     }
@@ -52,10 +53,10 @@ public class Peasant : Person
     }
 
 
-    public Job FindWork()
+    public Task FindWork()
     {
-        Job newJob = new Job();
+        Task newTask = new Task();
 
-        return newJob;
+        return newTask;
     }
 }

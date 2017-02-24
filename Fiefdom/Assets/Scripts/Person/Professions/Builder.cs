@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using People;
+using Structures;
 
 public class Builder : MonoBehaviour
 {
     //References
 
     //Pre-initialized data
-    public static Dictionary<BuildPhase, bool> allowedJobs = new Dictionary<BuildPhase, bool>
+    public static Dictionary<BuildPhase, bool> allowedTasks = new Dictionary<BuildPhase, bool>
     {
-        {BuildPhase.design, false}, {BuildPhase.carpentry, false}, {BuildPhase.masonry, false},
-        {BuildPhase.thatching, false}, {BuildPhase.general, false}
+        {BuildPhase.Design, false}, {BuildPhase.Carpentry, false}, {BuildPhase.Masonry, false},
+        {BuildPhase.Thatching, false}, {BuildPhase.General, false}
     };
     
 
 
 
-    public void OnEnable()
+    void OnEnable()
     {
-
+        
     }
 
-    public void OnDisable()
+    void OnDisable()
     {
 
     }

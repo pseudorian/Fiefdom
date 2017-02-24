@@ -31,6 +31,9 @@ public class CursorController : MonoBehaviour
         }
     }
 
+    //Layer Masks
+    public const int TERRAIN_LAYER = 10;
+
 
 
     void Awake()

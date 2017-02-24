@@ -43,12 +43,12 @@ public class PeasantGeneration : MonoBehaviour
                 switch(i)
                 {
                     case 0:
-                        p = GenerateAdult(Gender.male);
+                        p = GenerateAdult(Gender.Male);
                         familySurname = p.name.sur;
                         break;
 
                     case 1:
-                        p = GenerateAdult(Gender.female);
+                        p = GenerateAdult(Gender.Female);
                         break;
 
                     default:
@@ -105,7 +105,7 @@ public class PeasantGeneration : MonoBehaviour
                             //if fMember is an adult, then set fMember as parent of p.
                             if(fMember.age >= 13)
                             {
-                                if(fMember.gender == Gender.male)
+                                if(fMember.gender == Gender.Male)
                                     p.family.AddFather(fMember);
                                 else
                                     p.family.AddMother(fMember);
@@ -128,9 +128,9 @@ public class PeasantGeneration : MonoBehaviour
         Gender gender;
         int i = Random.Range(0, 10);
         if(i < 7)
-            gender = Gender.male;
+            gender = Gender.Male;
         else
-            gender = Gender.female;
+            gender = Gender.Female;
 
         float age;
         int j = Random.Range(0, 10);
@@ -163,9 +163,9 @@ public class PeasantGeneration : MonoBehaviour
         Gender gender;
         int i = Random.Range(0, 100);
         if(i < 53)
-            gender = Gender.male;
+            gender = Gender.Male;
         else
-            gender = Gender.female;
+            gender = Gender.Female;
 
         float age;
         int j = Random.Range(0, 10);

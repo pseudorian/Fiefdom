@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,62 +7,52 @@ namespace People
 {
     public enum  Gender
     {
-        male, female
+        Male, Female
     }
 
     public enum State
     {
-        working, resting
+        Working, Resting
     }
 
     public enum DeathCause
     {
-        hunger, thirst, age
+        Hunger, Thirst, Age
     }
 
     public enum Profession
     {
-        unemployed,         //No job
-        child,              //Children can't work
-        student,            //Older children and adults can attend school
-        timberman,          //Fells trees and collects timber
-        miner,              //Mines ores
-        quarrier,           //Quarries for stone
-        architect,          //Designs buildings before they are built
-        carpenter,          //Builds wooden portions of constructions
-        mason,              //Builds stone and brick portions of constructions
-        thatcher,           //Thatches rooves
-        builder,            //Builds constructions (general)
-        brewer,				//Brews and serves ale at abbeys
-        farmer,             //Farms fields
-        clayExtractor,      //Extracts clay from clay pits
-        ceramist            //Fires clay and makes bricks, pottery, etc.
+        Unemployed,         //No job
+        Child,              //Children can't work
+        Student,            //Older children and adults can attend school
+        Timberman,          //Fells trees and collects timber
+        Miner,              //Mines ores
+        Quarrier,           //Quarries for stone
+        Architect,          //Designs buildings before they are built
+        Carpenter,          //Builds wooden portions of constructions
+        Mason,              //Builds stone and brick portions of constructions
+        Thatcher,           //Thatches rooves
+        Builder,            //Builds constructions (general)
+        Brewer,				//Brews and serves ale at abbeys
+        Farmer,             //Farms fields
+        ClayExtractor,      //Extracts clay from clay pits
+        Ceramist            //Fires clay and makes bricks, pottery, etc.
     }
-
-    public enum BuildPhase
-    {
-        blank,
-        general,
-        design,
-        carpentry,
-        masonry,
-        thatching
-    } 
 
     public enum WorkToughness
     {
-        veryEasy,
-        easy,
-        average,
-        hard,
-        veryHard,
-        mythical
+        VeryEasy,
+        Easy,
+        Average,
+        Hard,
+        VeryHard,
+        Mythical
     }
 
     public enum PersonalityTrait
     {
-        greedy, envious, gluttonous, lazy, shortTempered, lustful, proud,
-        hypocrite, stubborn, gossiper, kleptomaniac
+        Greedy, Envious, Gluttonous, Lazy, ShortTempered, Lustful, Proud,
+        Hypocrite, Stubborn, Gossiper, Kleptomaniac
     }
 
     public static class Names
@@ -154,36 +145,62 @@ namespace People
         };
     }
 
-    public enum ProjectType
+    public class Task
     {
-        build, farm
-    }
+        public Structures.Project project;
+        public Transform taskTarget;
+        public string title;
+        public string description;
 
-    public class Project
-    {
-        public Transform target;
-        public ProjectType type;
-    }
-
-    public class Job
-    {
-        public Project project;
-        public Transform target;
-
-        public Job()
+        public Task()
         {
             project = null;
-            target = null;
+            taskTarget = null;
+        }
+
+        public virtual void PerformTaskAction()
+        {
+
         }
     }
 
-    public class BuildJob : Job
+    public class BuildTask : Task
     {
-        public BuildPhase phase;
+        public Structures.BuildPhase phase;
 
-        public BuildJob() : base()
+        public BuildTask() : base()
         {
-            phase = BuildPhase.blank;
+            phase = Structures.BuildPhase.blank;
+        }
+
+        public BuildTask(Structures.BuildPhase phase) : base()
+        {
+            this.phase = phase;
+        }
+
+        public override void PerformTaskAction()
+        {
+            
+        }
+    }
+
+    public class GatherTask : Task
+    {
+        public Resources.Resource toGather;
+
+        public GatherTask() : base()
+        {
+
+        }
+
+        public GatherTask(Resources.Resource toGather) : base()
+        {
+            this.toGather = toGather;
+        }
+
+        public override void PerformTaskAction()
+        {
+            
         }
     }
 }

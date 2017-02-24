@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 using People;
+using Structures;
 
 
 /// <summary>
@@ -13,32 +13,85 @@ using People;
 /// </summary>
 public class Laws : MonoBehaviour
 {
-    private static Profession[] jobPriorities = new Profession[]
+    private static ProjectType[] projectTypePriorities = new ProjectType[]
     {
-        Profession.architect, Profession.brewer, Profession.builder, Profession.carpenter, Profession.ceramist, Profession.clayExtractor,
-        Profession.farmer, Profession.mason, Profession.miner, Profession.quarrier, Profession.thatcher, Profession.timberman
+        ProjectType.Build, ProjectType.Farm
     };
 
-    public void ChangeJobPriority(Profession profession, int priority)
-    {
-        int currentPriority = GetJobPriority(profession);
-        
-    }
-
-    public int GetJobPriority(Profession profession)
+    public int GetProjectTypePriority(ProjectType p)
     {
         int priority = -1;
-        for(int i = 0; i < jobPriorities.Length; i++)
+        for(int i = 0; i < projectTypePriorities.Length; i++)
         {
-            if(jobPriorities[i] == profession)
+            if(projectTypePriorities[i] == p)
             {
                 priority = i;
                 break;
             }
         }
         if(priority < 0)
-            throw new System.Exception("No profession of type " + Enum.GetName(typeof(Profession), profession) + " was found in a search for its job priority.");
+            throw new System.Exception("No project of type " + System.Enum.GetName(typeof(Profession), p) + " was found in a search for its job priority.");
         else
-            return priority; 
+            return priority;
+    }
+
+    public void SetProjectTypePriority(ProjectType type, int newPriority)
+    {
+        int currentPriority = GetProjectTypePriority(type);
+
+        if(newPriority == currentPriority)
+            return;
+        else if(newPriority < 0 || newPriority > projectTypePriorities.Length - 1)
+            throw new System.Exception("Attempted to change a project type to a priority level that is out of bounds.");
+        else
+        {
+            ProjectType newType = type;
+            if(newPriority > currentPriority)
+            {
+                for(int i = newPriority; i >= currentPriority; i--)
+                {
+                    ProjectType previousType = projectTypePriorities[i];
+                    projectTypePriorities[i] = newType;
+                    newType = previousType;
+                }
+            }
+            else //if(newPriority < currentPriority)
+            {
+                for(int i = newPriority; i <= currentPriority; i++)
+                {
+                    ProjectType previousType = projectTypePriorities[i];
+                    projectTypePriorities[i] = newType;
+                    newType = previousType;
+                }
+            }
+        }
+    }
+
+    public void IncreaseProjectTypePriority(ProjectType type)
+    {
+        int currentPriority = GetProjectTypePriority(type);
+
+        if(currentPriority == 0)
+            return;
+        else
+        {
+            ProjectType previousType = projectTypePriorities[currentPriority - 1];
+            projectTypePriorities[currentPriority - 1] = type;
+            projectTypePriorities[currentPriority] = previousType;
+        }
+    }
+
+    public void DecreaseProjectTypePriority(ProjectType type)
+    {
+        int currentPriority = GetProjectTypePriority(type);
+
+        if(currentPriority == projectTypePriorities.Length - 1)
+            return;
+        else
+        {
+            ProjectType previousType = projectTypePriorities[currentPriority + 1];
+            projectTypePriorities[currentPriority + 1] = type;
+            projectTypePriorities[currentPriority] = previousType;
+        }
     }
 }

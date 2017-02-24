@@ -19,7 +19,7 @@ public class PersonStatus
             if(value > 0)
                 hunger = value;
             else
-                person.Die(DeathCause.hunger);
+                person.Die(DeathCause.Hunger);
         }
     }
 
@@ -34,7 +34,7 @@ public class PersonStatus
             if(value > 0)
                 thirst = value;
             else
-                person.Die(DeathCause.thirst);
+                person.Die(DeathCause.Thirst);
         }
     }
 
@@ -92,7 +92,7 @@ public class PersonStatus
     /// Add hunger to person. Use no argument to imply the person is doing nothing or very little.
     /// <para>Only to be used with Peasants.</para>
     /// </summary>
-    public void Hunger() { Hunger(WorkToughness.veryEasy); }
+    public void Hunger() { Hunger(WorkToughness.VeryEasy); }
 
     /// <summary>
     /// Add hunger to person. Use no argument to imply the person is doing nothing or very little.
@@ -108,22 +108,22 @@ public class PersonStatus
         float h = 0;
         switch(workToughness)
         {
-            case WorkToughness.veryEasy:
+            case WorkToughness.VeryEasy:
                 h = 0.5f;
                 break;
-            case WorkToughness.easy:
+            case WorkToughness.Easy:
                 h = 0.75f;
                 break;
-            case WorkToughness.average:
+            case WorkToughness.Average:
                 h = 1f;
                 break;
-            case WorkToughness.hard:
+            case WorkToughness.Hard:
                 h = 1.5f;
                 break;
-            case WorkToughness.veryHard:
+            case WorkToughness.VeryHard:
                 h = 2f;
                 break;
-            case WorkToughness.mythical:
+            case WorkToughness.Mythical:
                 h = 3f;
                 break;
         }
@@ -137,7 +137,7 @@ public class PersonStatus
     }
 
 
-    public void Thirst() { Thirst(WorkToughness.veryEasy); }
+    public void Thirst() { Thirst(WorkToughness.VeryEasy); }
 
     public void Thirst(WorkToughness workToughness)
     {
@@ -148,22 +148,22 @@ public class PersonStatus
         float t = 0;
         switch(workToughness)
         {
-            case WorkToughness.veryEasy:
+            case WorkToughness.VeryEasy:
                 t = 0.75f;
                 break;
-            case WorkToughness.easy:
+            case WorkToughness.Easy:
                 t = 1f;
                 break;
-            case WorkToughness.average:
+            case WorkToughness.Average:
                 t = 1.25f;
                 break;
-            case WorkToughness.hard:
+            case WorkToughness.Hard:
                 t = 1.5f;
                 break;
-            case WorkToughness.veryHard:
+            case WorkToughness.VeryHard:
                 t = 2.5f;
                 break;
-            case WorkToughness.mythical:
+            case WorkToughness.Mythical:
                 t = 5f;
                 break;
         }
@@ -177,7 +177,7 @@ public class PersonStatus
     }
 
 
-    public void Tire() { Tire(WorkToughness.veryEasy); }
+    public void Tire() { Tire(WorkToughness.VeryEasy); }
 
     public void Tire(WorkToughness workToughness)
     {
@@ -188,22 +188,22 @@ public class PersonStatus
         float e = 0;
         switch(workToughness)
         {
-            case WorkToughness.veryEasy:
+            case WorkToughness.VeryEasy:
                 e = 0.25f;
                 break;
-            case WorkToughness.easy:
+            case WorkToughness.Easy:
                 e = 0.5f;
                 break;
-            case WorkToughness.average:
+            case WorkToughness.Average:
                 e = 0.75f;
                 break;
-            case WorkToughness.hard:
+            case WorkToughness.Hard:
                 e = 1f;
                 break;
-            case WorkToughness.veryHard:
+            case WorkToughness.VeryHard:
                 e = 1.25f;
                 break;
-            case WorkToughness.mythical:
+            case WorkToughness.Mythical:
                 e = 2f;
                 break;
         }
